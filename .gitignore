@@ -1,0 +1,6 @@
+**/build/
+*.bin
+*.elf
+*.blend1
+*.wav
+__pycache__/

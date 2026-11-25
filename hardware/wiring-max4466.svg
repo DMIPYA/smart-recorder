@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 610" role="img" aria-labelledby="title desc">
+  <title id="title">Схема подключения Smart Recorder с GY-MAX4466</title>
+  <desc id="desc">Девять проводов от ESP32-C3 SuperMini к микрофону и модулю microSD. Микрофон питается от 3,3 вольта, модуль карты со стабилизатором от 5 вольт. Земля общая.</desc>
+  <style>
+    text { font-family: "Segoe UI", Arial, sans-serif; fill: #182839; }
+    .heading { font-weight: 600; font-size: 27px; }
+    .module { font-weight: 600; font-size: 19px; }
+    .sub { fill: #4b5c71; font-size: 14px; }
+    .pin { font-family: Consolas, monospace; font-size: 16px; font-weight: 600; }
+    .signal { fill: #425568; font-size: 13px; }
+  </style>
+  <rect width="920" height="610" fill="#f8fafc"/>
+  <text x="35" y="44" class="heading">Smart Recorder · схема пайки</text>
+  <text x="35" y="70" class="sub">ESP32-C3 SuperMini · GY-MAX4466 · microSD SPI со стабилизатором</text>
+  <rect x="35" y="99" width="280" height="442" rx="15" fill="#e7f1f5" stroke="#6795a1"/>
+  <text x="55" y="129" class="module">ESP32-C3 SuperMini</text>
+  <text x="55" y="169" class="sub">Пауэрбанк → USB-C</text>
+  <text x="55" y="193" class="sub">5 В через кабель</text>
+  <text x="55" y="250" class="sub">BOOT (GPIO9)</text>
+  <text x="55" y="273" class="sub">Старт / стоп</text>
+  <text x="55" y="330" class="sub">LED (GPIO8)</text>
+  <text x="55" y="353" class="sub">Индикатор записи</text>
+  <rect x="615" y="99" width="270" height="162" rx="15" fill="#efeaf6" stroke="#9581a9"/>
+  <text x="634" y="129" class="module">GY-MAX4466</text>
+  <text x="742" y="173" class="sub">Микрофон</text>
+  <text x="742" y="198" class="sub">с усилителем</text>
+  <rect x="615" y="273" width="270" height="268" rx="15" fill="#e8effa" stroke="#7d9cc1"/>
+  <text x="634" y="304" class="module">Модуль microSD SPI</text>
+  <text x="750" y="335" class="sub">Со стабилизатором</text>
+  <text x="750" y="360" class="sub">Карта FAT32</text>
+  <g>
+    <text x="296" y="173" text-anchor="end" class="pin">3V3</text>
+    <path d="M315 168H615" fill="none" stroke="#bf453b" stroke-width="2.3"/>
+    <circle cx="315" cy="168" r="4" fill="#bf453b"/>
+    <circle cx="615" cy="168" r="4" fill="#bf453b"/>
+    <rect x="388" y="156" width="154" height="24" rx="5" fill="#f8fafc"/>
+    <text x="465" y="172" text-anchor="middle" class="signal">питание 3,3 В</text>
+    <text x="634" y="173" class="pin">VCC</text>
+  </g>
+  <g>
+    <text x="296" y="210" text-anchor="end" class="pin">GND</text>
+    <path d="M315 205H615" fill="none" stroke="#667387" stroke-width="2.3"/>
+    <circle cx="315" cy="205" r="4" fill="#667387"/>
+    <circle cx="615" cy="205" r="4" fill="#667387"/>
+    <rect x="388" y="193" width="154" height="24" rx="5" fill="#f8fafc"/>
+    <text x="465" y="209" text-anchor="middle" class="signal">общая земля</text>
+    <text x="634" y="210" class="pin">GND</text>
+  </g>
+  <g>
+    <text x="296" y="247" text-anchor="end" class="pin">GPIO4</text>
+    <path d="M315 242H615" fill="none" stroke="#176f92" stroke-width="2.3"/>
+    <circle cx="315" cy="242" r="4" fill="#176f92"/>
+    <circle cx="615" cy="242" r="4" fill="#176f92"/>
+    <rect x="388" y="230" width="154" height="24" rx="5" fill="#f8fafc"/>
+    <text x="465" y="246" text-anchor="middle" class="signal">аналоговый звук</text>
+    <text x="634" y="247" class="pin">OUT</text>
+  </g>
+  <g>
+    <text x="296" y="335" text-anchor="end" class="pin">5V / VBUS</text>
+    <path d="M315 330H615" fill="none" stroke="#bf453b" stroke-width="2.3"/>
+    <circle cx="315" cy="330" r="4" fill="#bf453b"/>
+    <circle cx="615" cy="330" r="4" fill="#bf453b"/>
+    <rect x="388" y="318" width="154" height="24" rx="5" fill="#f8fafc"/>
+    <text x="465" y="334" text-anchor="middle" class="signal">питание 5 В</text>
+    <text x="634" y="335" class="pin">VCC</text>
+  </g>
+  <g>
+    <text x="296" y="372" text-anchor="end" class="pin">GND</text>
+    <path d="M315 367H615" fill="none" stroke="#667387" stroke-width="2.3"/>
+    <circle cx="315" cy="367" r="4" fill="#667387"/>
+    <circle cx="615" cy="367" r="4" fill="#667387"/>
+    <rect x="388" y="355" width="154" height="24" rx="5" fill="#f8fafc"/>
+    <text x="465" y="371" text-anchor="middle" class="signal">общая земля</text>
+    <text x="634" y="372" class="pin">GND</text>
+  </g>
+  <g>
+    <text x="296" y="409" text-anchor="end" class="pin">GPIO6</text>
+    <path d="M315 404H615" fill="none" stroke="#176f92" stroke-width="2.3"/>
+    <circle cx="315" cy="404" r="4" fill="#176f92"/>
+    <circle cx="615" cy="404" r="4" fill="#176f92"/>
+    <rect x="388" y="392" width="154" height="24" rx="5" fill="#f8fafc"/>
+    <text x="465" y="408" text-anchor="middle" class="signal">такт SPI</text>
+    <text x="634" y="409" class="pin">SCK / CLK</text>
+  </g>
+  <g>
+    <text x="296" y="446" text-anchor="end" class="pin">GPIO7</text>
+    <path d="M315 441H615" fill="none" stroke="#176f92" stroke-width="2.3"/>
+    <circle cx="315" cy="441" r="4" fill="#176f92"/>
+    <circle cx="615" cy="441" r="4" fill="#176f92"/>
+    <rect x="388" y="429" width="154" height="24" rx="5" fill="#f8fafc"/>
+    <text x="465" y="445" text-anchor="middle" class="signal">карта → ESP32</text>
+    <text x="634" y="446" class="pin">MISO / DO</text>
+  </g>
+  <g>
+    <text x="296" y="483" text-anchor="end" class="pin">GPIO10</text>
+    <path d="M315 478H615" fill="none" stroke="#176f92" stroke-width="2.3"/>
+    <circle cx="315" cy="478" r="4" fill="#176f92"/>
+    <circle cx="615" cy="478" r="4" fill="#176f92"/>
+    <rect x="388" y="466" width="154" height="24" rx="5" fill="#f8fafc"/>
+    <text x="465" y="482" text-anchor="middle" class="signal">ESP32 → карта</text>
+    <text x="634" y="483" class="pin">MOSI / DI</text>
+  </g>
+  <g>
+    <text x="296" y="520" text-anchor="end" class="pin">GPIO1</text>
+    <path d="M315 515H615" fill="none" stroke="#176f92" stroke-width="2.3"/>
+    <circle cx="315" cy="515" r="4" fill="#176f92"/>
+    <circle cx="615" cy="515" r="4" fill="#176f92"/>
+    <rect x="388" y="503" width="154" height="24" rx="5" fill="#f8fafc"/>
+    <text x="465" y="519" text-anchor="middle" class="signal">выбор карты</text>
+    <text x="634" y="520" class="pin">CS / SS</text>
+  </g>
+  <text x="35" y="572" class="sub">Подключай по маркировке на платах. Уровни сигналов SPI и аналогового входа — 3,3 В.</text>
+  <text x="35" y="592" class="sub">GND у обеих плат общий с ESP32. BOOT и LED уже находятся на SuperMini.</text>
+</svg>
